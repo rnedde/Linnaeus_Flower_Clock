@@ -1,0 +1,114 @@
+[
+    {
+        "botanical_name": "Reichardia tingitana",
+        "common_name": "False Sow Thistle",
+        "opening_time": 6,
+        "closing_time": 10, 
+        "color": "#ffc403"
+    },
+    {
+        "botanical_name": "Sonchus oleraceus",
+        "common_name": "Sow Thistle",
+        "opening_time": 5,
+        "closing_time": 12, 
+        "color": "#ffea03"
+    },
+    {
+        "botanical_name": "Taraxacum officinale",
+        "common_name": "Dandelion",
+        "opening_time": 5,
+        "closing_time": 9, 
+        "color": "#ffe203"
+    },
+    {
+        "botanical_name": "Crepis alpina",
+        "common_name": "Hawk's Beard",
+        "opening_time": 5,
+        "closing_time": 11, 
+        "color": "#bf770a"
+    },
+    {
+        "botanical_name": "Tragopogon hybridus",
+        "common_name": "Goat's Beard",
+        "opening_time": 5,
+        "closing_time": 11, 
+        "color": "#ffefd6"
+    },
+    {
+        "botanical_name": "Hypochaeris maculata",
+        "common_name": "Spotted Cat's Ear",
+        "opening_time": 6,
+        "closing_time": 16, 
+        "color": "#ffcb0f"
+    },
+    {
+        "botanical_name": "Hieracium umbellatum",
+        "common_name": "Hawkweed",
+        "opening_time": 6,
+        "closing_time": 17, 
+        "color": "#ffc403"
+    },
+    {
+        "botanical_name": "Hieracium murorum",
+        "common_name": "Hawkweed",
+        "opening_time": 6,
+        "closing_time": 14, 
+        "color": "#ffc403"
+    },
+    {
+        "botanical_name": "Sonchus palustris",
+        "common_name": "Marsh Sow-Thistle",
+        "opening_time": 7,
+        "closing_time": 14, 
+        "color": "#ffc403"
+    },
+    {
+        "botanical_name": "Leontodon autumnale",
+        "common_name": "Hawkweed",
+        "opening_time": 7,
+        "closing_time": 15, 
+        "color": "#ffc403"
+    },
+    {
+        "botanical_name": "Cicerbita alpina",
+        "common_name": "Blue Sow-Thistle",
+        "opening_time": 7,
+        "closing_time": 12, 
+        "color": "#895eff"
+    },
+    {
+        "botanical_name": "Lactuca sativa",
+        "common_name": "Garden Lettuce",
+        "opening_time": 7,
+        "closing_time": 10, 
+        "color": "#ffc403"
+    },
+    {
+        "botanical_name": "Nymphaea alba",
+        "common_name": "White Waterlily",
+        "opening_time": 7,
+        "closing_time": 17, 
+        "color": "#fdfff2"
+    },
+    {
+        "botanical_name": "Petrorhagia prolifera",
+        "common_name": "Proliferous Pink",
+        "opening_time": 8,
+        "closing_time": 3, 
+        "color": "#f3cafa"
+    },
+    {
+        "botanical_name": "Hypochaeris glabra",
+        "common_name": "Smooth Cat's-Ear",
+        "opening_time": 9,
+        "closing_time": 13, 
+        "color": "#ffc403"
+    },
+    {
+        "botanical_name": "Mesembryanthemum crystallinum",
+        "common_name": "Ice-Plant",
+        "opening_time": 10,
+        "closing_time": 15, 
+        "color": "#ffffff"
+    }
+]
