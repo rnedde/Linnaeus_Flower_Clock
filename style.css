@@ -7,10 +7,70 @@
 html, body {
     height: 100%;
     width: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 canvas {
     display: block;
     margin: 0;
     padding: 0;
+}
+h1{
+    text-align:center;
+    padding:30px;
+}
+#garden-container{
+    background-color: #41874b;
+    left:0%;
+}
+#garden {
+    display: flex;
+    flex-wrap: wrap;  /* Ensures items wrap to the next row if there's not enough space */
+    justify-content: center; /* Centers items */
+    gap: 40px;  /* Adjust spacing */
+    width: 100%;
+    padding: 10px;
+
+ 
+    /* border-style: dotted;
+    border-color: green; */
+}
+.header{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+#time{
+    text-align:center;
+    border-style:solid;
+    display:flex;
+justify-content: center;}
+#clock{
+    border-style:dotted;
+    width:200px;
+}
+.flower-container{
+    width: 150px;
+    height: 250px;
+    position: relative;
+    
+    /* border-style: dashed;
+    border-color: pink; */
+}
+.flower{
+    outline: 2px dashed beige;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.info-container{
+    text-align: center;
+    font-size: smaller;
+    color: brown;
+    background-color: beige;
+    margin:10px;
+    padding:3px;
+    
+    /* border-style: double;
+    border-color: blue; */
 }
