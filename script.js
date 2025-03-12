@@ -76,7 +76,7 @@ timeAdjust();
 function resetTime(){
     const resetButton = document.getElementById("clock")
     displayHour = String(time.getHours()).padStart(2, '0');
-    resetButton.style.color = "black";
+    resetButton.style.color = "beige";
     updateClock();
     
 }
@@ -182,10 +182,27 @@ function createFlowerGrid() {
                     }
                     // Draw flower
                     p.fill(flower.color);
-                    p.ellipse(width / 2, height / 2, 40, 40);
+                    
+                    p.setCenter(width/2, height/2);
+                    p.polarSquares(12, 5,25);
+                    p.polarSquares(12, 5,20);
+
+                    p.ellipse(0, 0, 40, 40);
+                    p.push();
+                    p.fill(20,30,10);
+                    p.blendMode(p.OVERLAY);
+                    p.ellipse(0, 0, 40, 40);
+                    p.pop();
                 }else{
+                    p.setCenter(width/2, height/2);
                     p.fill(29, 77, 36)
-                    p.ellipse(width / 2, height / 2, 20, 20);
+                    
+                    p.ellipse(0, 0, 20, 20);
+                    p.push();
+                    p.fill(20,30,10,10);
+                    p.blendMode(p.OVERLAY);
+                    p.polarTriangles(12,10,0);
+                    p.pop();
                 }
                 
                 

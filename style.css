@@ -34,9 +34,9 @@ h1 {
     justify-content: center;
     /* Centers items */
     gap: 40px;
-    /* Adjust spacing */
     width: 100%;
     padding: 10px;
+    margin-bottom:50px;
 
 }
 
@@ -61,12 +61,17 @@ h1 {
 }
 
 #time {
+    position: sticky;
+    top: 0;
+    background-color:#52965d;
+    z-index: 1000; /* Keeps it above other elements */
     text-align: center;
     display: flex;
     justify-content: center;
     padding: 10px;
     font-family: prestige-elite-std, monospace;
 }
+
 
 #clock {
     width: 200px;
@@ -75,7 +80,7 @@ h1 {
 
 .flower-container {
     width: 150px;
-    height: 250px;
+    height: 220px;
     position: relative;
 
     /* border-style: dashed;
@@ -90,11 +95,10 @@ h1 {
 
 .info-container {
     text-align: center;
-
     color: brown;
     background-color: beige;
-    margin: 10px;
-    padding: 3px;
+    margin: 7px;
+    padding: 8px;
     font-family: vendetta, serif;
 font-weight: 300;
 font-style: normal;
