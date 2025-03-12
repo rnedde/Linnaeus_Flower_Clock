@@ -119,6 +119,7 @@ function createFlowerGrid() {
         //Creates a container div, flower illustration div, and info div. 
         let flowerContainer = document.createElement("div");
         flowerContainer.classList.add("flower-container");
+
         flowerContainer.id = "flower" + index;
         garden.appendChild(flowerContainer);
 
@@ -158,27 +159,24 @@ function createFlowerGrid() {
                 if (isOpen){
                     
                     if (displayHour >= 6 && displayHour <= 18) {
-                    let sunAngle = ((displayHour - 6) / 12) * Math.PI; // Maps time (6 AM - 6 PM) to sun position
-                
-                    // Shadow offset: Moves opposite to sun, shifts with elongation
-                    let shadowOffsetX = Math.cos(sunAngle) * 30; // Slight left/right movement
-                    let shadowOffsetY = Math.sin(sunAngle) * 15 + 20; // Slight up/down movement
-                
-                    // Shadow size: Elongates in morning/evening, shortens midday
-                    let elongationFactor = 1 + Math.abs(Math.cos(sunAngle)) * 0.5;  // More subtle elongation
-                    let shadowWidth = 60 * elongationFactor;  // Subtle elongation of the width
-                    let shadowHeight = 40 * elongationFactor;  // Subtle elongation of the height
-                
-                    // Shadow transparency: More diffuse at midday, sharper in morning/evening
-                    let shadowAlpha = 80 + Math.abs(Math.sin(sunAngle)) * 50; // Fading alpha
-
-                    // Apply blur effect for the shadow
-                    p.drawingContext.shadowColor = `rgba(0, 0, 0, ${shadowAlpha / 255})`;
-                
-                    // Draw shadow
-                    p.fill(0, 0, 0, shadowAlpha);
-                    p.ellipse(width / 2 + shadowOffsetX, height / 2 + shadowOffsetY, shadowWidth, shadowHeight);
-                        
+                        let sunAngle = ((displayHour - 6) / 12) * Math.PI; // Maps time (6 AM - 6 PM) to sun position
+                    
+                        // Shadow offset: Moves opposite to sun, shifts with elongation
+                        let shadowOffsetX = Math.cos(sunAngle) * 30;
+                        let shadowOffsetY = Math.sin(sunAngle) * 15 + 20;
+                    
+                        // Shadow size: More elongated in morning/evening
+                        let elongationFactor = 1 + Math.abs(Math.cos(sunAngle)) * 0.5;
+                        let shadowWidth = 60 * elongationFactor;
+                        let shadowHeight = 40 * elongationFactor;
+                    
+                        // Shadow transparency: More diffuse at midday, sharper in morning/evening
+                        let shadowAlpha = 80 + Math.abs(Math.sin(sunAngle)) * 50;
+            
+                        // Draw shadow
+                        p.fill(0, 0, 0, shadowAlpha);
+                        p.ellipse(width / 2 + shadowOffsetX, height / 2 + shadowOffsetY, shadowWidth, shadowHeight);
+            
                     }
                     // Draw flower
                     p.fill(flower.color);
@@ -193,6 +191,7 @@ function createFlowerGrid() {
                     p.blendMode(p.OVERLAY);
                     p.ellipse(0, 0, 40, 40);
                     p.pop();
+                    
                 }else{
                     p.setCenter(width/2, height/2);
                     p.fill(29, 77, 36)
@@ -211,4 +210,26 @@ function createFlowerGrid() {
         })
     }
     )
+}
+
+// Get the title and the popup
+let title = document.getElementById('title');
+let popup = document.getElementById('popup');
+let close = document.getElementById('close');
+
+// When the title is clicked, show the popup
+title.onclick = function() {
+    popup.style.display = 'flex';
+}
+
+// When the close button is clicked, hide the popup
+close.onclick = function() {
+    popup.style.display = 'none';
+}
+
+// Optional: Close the popup if clicking outside the popup content
+window.onclick = function(event) {
+    if (event.target === popup) {
+        popup.style.display = 'none';
+    }
 }

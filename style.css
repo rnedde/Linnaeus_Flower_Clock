@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+
 }
 
 html,
@@ -9,7 +11,9 @@ body {
     height: 100%;
     width: 100%;
     background-color: #41874b;
-}
+        cursor: url("cursor.png") 32 32, auto;
+
+    }
 
 canvas {
     display: block;
@@ -50,21 +54,19 @@ h1 {
     font-style: italic;
     font-size:xx-large
 }
-.title{
-    background-color: beige;
-    color:brown;
+#title{
+    color:beige;
     padding:8px;
     padding-left:40px;
     padding-right:40px;
-    border-radius: 10px;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+
 }
 
 #time {
     position: sticky;
     top: 0;
     background-color:#52965d;
-    z-index: 1000; /* Keeps it above other elements */
+    z-index: 500; /* Keeps it above other elements */
     text-align: center;
     display: flex;
     justify-content: center;
@@ -135,16 +137,17 @@ font-style: normal;
     box-sizing: border-box;
     color: #111827;
     font-family: prestige-elite-std, monospace;
-
     font-weight: 600;
     line-height: 1.25rem;
+    cursor: url("cursor.png") 32 32, auto;
+
     padding: .75rem 1rem;
     text-align: center;
     border-radius: 30px;
     text-decoration: none #D1D5DB solid;
     text-decoration-thickness: auto;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    cursor: pointer;
+
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
@@ -161,4 +164,42 @@ font-style: normal;
 
 .button-39:focus-visible {
     box-shadow: none;
+}
+
+
+.popup {
+    display: none; /* Hide the popup initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    color: brown;
+    background-color: beige;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+    font-family: vendetta, serif;
+font-weight: 300;
+font-style: normal;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 50px;
+    font-weight: bold;
+}
+p{
+    font-size:smaller;
 }
