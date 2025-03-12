@@ -68,6 +68,22 @@ function timeAdjust(){
         
     })
 
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "ArrowLeft") {
+            // Handle left arrow key
+            displayHour = (displayHour - 1 + 24) % 24; // Decrease hour, wrap around 0 to 23
+            updateClock();
+            restartTimeout();
+            resetButton.style.color = "brown";
+        } else if (event.key === "ArrowRight") {
+            // Handle right arrow key
+            displayHour = (displayHour + 1) % 24; // Increase hour, wrap around 0 to 23
+            updateClock();
+            restartTimeout();
+            resetButton.style.color = "brown";
+        }
+    });
+
     
 }
 timeAdjust();

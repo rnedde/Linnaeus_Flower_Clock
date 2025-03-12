@@ -55,11 +55,18 @@ h1 {
     font-size:xx-large
 }
 #title{
-    color:beige;
+    display:flex;
+    align-items: center;
+    color:#f5f5dc;
     padding:8px;
     padding-left:40px;
     padding-right:40px;
 
+}
+#info-button{
+    margin-left:10px;
+    position:absolute;
+    left:95%
 }
 
 #time {
