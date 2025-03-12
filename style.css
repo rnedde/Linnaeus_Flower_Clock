@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 
 }
 
@@ -11,9 +11,9 @@ body {
     height: 100%;
     width: 100%;
     background-color: #41874b;
-        cursor: url("cursor.png") 32 32, auto;
+    cursor: url("cursor.png") 32 32, auto;
 
-    }
+}
 
 canvas {
     display: block;
@@ -27,7 +27,7 @@ h1 {
 }
 
 #garden-container {
-    
+
     left: 0%;
 }
 
@@ -40,7 +40,7 @@ h1 {
     gap: 40px;
     width: 100%;
     padding: 10px;
-    margin-bottom:50px;
+    margin-bottom: 50px;
 
 }
 
@@ -52,28 +52,32 @@ h1 {
     font-family: vendetta, serif;
     font-weight: 500;
     font-style: italic;
-    font-size:xx-large
+    font-size: xx-large
 }
-#title{
-    display:flex;
+
+#title {
+    display: flex;
     align-items: center;
-    color:#f5f5dc;
-    padding:8px;
-    padding-left:40px;
-    padding-right:40px;
+    color: #f5f5dc;
+    padding: 8px;
+    padding-left: 40px;
+    padding-right: 40px;
 
 }
-#info-button{
-    margin-left:10px;
-    position:absolute;
-    left:95%
+
+#info-button {
+    margin-left: 10px;
+    position: absolute;
+    left: 95%
 }
 
 #time {
     position: sticky;
     top: 0;
-    background-color:#52965d;
-    z-index: 500; /* Keeps it above other elements */
+    color:beige;
+    background-color: #5a9c65;
+    z-index: 500;
+    /* Keeps it above other elements */
     text-align: center;
     display: flex;
     justify-content: center;
@@ -109,8 +113,8 @@ h1 {
     margin: 7px;
     padding: 8px;
     font-family: vendetta, serif;
-font-weight: 300;
-font-style: normal;
+    font-weight: 300;
+    font-style: normal;
     border-radius: 5px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
@@ -175,13 +179,15 @@ font-style: normal;
 
 
 .popup {
-    display: none; /* Hide the popup initially */
+    display: none;
+    /* Hide the popup initially */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
     justify-content: center;
     align-items: center;
     z-index: 9999;
@@ -190,14 +196,14 @@ font-style: normal;
 .popup-content {
     color: brown;
     background-color: beige;
-    padding: 20px;
+    padding: 50px;
     border-radius: 10px;
     width: 50%;
     max-width: 600px;
     text-align: center;
     font-family: vendetta, serif;
-font-weight: 300;
-font-style: normal;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .close {
@@ -207,6 +213,11 @@ font-style: normal;
     font-size: 50px;
     font-weight: bold;
 }
-p{
-    font-size:smaller;
+
+p {
+    font-size: smaller;
+}
+
+#copyright {
+    color: rgb(209, 207, 178)
 }
