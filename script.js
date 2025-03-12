@@ -19,7 +19,6 @@ fetch("flowers.json")
     })
     .then(data => {
         flowerData = data;
-        console.log(flowerData);  // Log the data to the console
         createFlowerGrid();  // Call the function to create the flower grid
     })
     .catch(error => {
@@ -50,7 +49,6 @@ function timeAdjust(){
     const resetButton = document.getElementById("clock")
     
     backButton.addEventListener("click", function(){
-        console.log("back button clicked!");
         displayHour = (displayHour-1+24) %24; // Decrease hour, wrap around 0 to 23
         updateClock();
         restartTimeout();
@@ -58,7 +56,6 @@ function timeAdjust(){
         
     })
     forwardButton.addEventListener("click", function(){
-        console.log("forward button clicked!");
         displayHour = (displayHour+1) %24; // Decrease hour, wrap around 0 to 23
         updateClock();
         restartTimeout();
@@ -66,7 +63,6 @@ function timeAdjust(){
         
     })
     resetButton.addEventListener("click", function(){
-        console.log("reset button clicked!");
         displayHour = time.getHours();
         resetTime();
         
@@ -114,7 +110,7 @@ function updateTimeFilter() {
 
 // Draws grid of flowers with information. 
 function createFlowerGrid() {
-    // console.log("creating flower grid with ", flowerData);
+   
 
     const garden = document.getElementById("garden");
 
@@ -138,9 +134,9 @@ function createFlowerGrid() {
 
         infoDiv.innerHTML = `
         <p>${flower.common_name}<p>
-        <p><i>${flower.botanical_name}<i><p>
-        <p>Opening Time: ${flower.opening_time}</p>
-        <p>Closing Time: ${flower.closing_time}</p>`;
+        <p><i>${flower.botanical_name}</i><p>
+        <p>Opening Time: ${flower.opening_time}:00</p>
+        <p>Closing Time: ${flower.closing_time}:00</p>`;
 
         // Draws garden plot and flower if applicable.
         new p5((p) => {
@@ -155,10 +151,12 @@ function createFlowerGrid() {
                 // displayHour = time.getHours();
                 // displayHour = 9;
 
+                
 
                 p.background(135, 104, 65);
                 let isOpen = displayHour >= flower.opening_time && displayHour < flower.closing_time;
                 if (isOpen){
+                    
                     if (displayHour >= 6 && displayHour <= 18) {
                     let sunAngle = ((displayHour - 6) / 12) * Math.PI; // Maps time (6 AM - 6 PM) to sun position
                 
@@ -185,6 +183,9 @@ function createFlowerGrid() {
                     // Draw flower
                     p.fill(flower.color);
                     p.ellipse(width / 2, height / 2, 40, 40);
+                }else{
+                    p.fill(29, 77, 36)
+                    p.ellipse(width / 2, height / 2, 20, 20);
                 }
                 
                 
